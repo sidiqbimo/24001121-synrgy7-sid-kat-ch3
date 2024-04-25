@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bimobelajar.simpledictionaryrev.MainNaviDirections
 
 
 class alphabetFragment : Fragment() {
@@ -29,7 +30,7 @@ class alphabetFragment : Fragment() {
         val alphabetList = ('A'..'Z').toList()
 
         val alphabetAdapter = AlphabetAdapter(alphabetList) { alphabet ->
-            val action = FragmentAlphabetDirections.actionFragmentAlphabetToFragmentWord(alphabet)
+            val action = MainNaviDirections.actionAlphabetFragmentToWordFragment(alphabet)
             findNavController().navigate(action)
         }
 

@@ -1,5 +1,6 @@
 package com.bimobelajar.simpledictionaryrev
 
+import WordAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -52,7 +53,7 @@ class wordFragment : Fragment() {
                 wordList.add(wordData("Book"))
             }
             'C' -> wordList.add(wordData("Cat"))
-            // Add cases for other alphabets in a similar manner
+            //TODO : lanjutin mapping word
             else -> {
                 //TODO : Bikin toast error
             }

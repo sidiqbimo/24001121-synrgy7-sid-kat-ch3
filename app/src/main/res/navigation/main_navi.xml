@@ -20,9 +20,9 @@
         android:label="fragment_word"
         tools:layout="@layout/fragment_word" >
         <argument
-            android:name="name"
+            android:name="alphabet"
             app:argType="string"
             app:nullable="true"
-            android:defaultValue="Namanya Kosong!" />
+            android:defaultValue="@null" />
     </fragment>
 </navigation>

@@ -19,6 +19,12 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets {
+        getByName("main") {
+            java.srcDir("build/generated/source/navigation-args")
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false

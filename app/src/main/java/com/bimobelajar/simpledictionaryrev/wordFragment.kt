@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class wordFragment : Fragment() {
     private lateinit var wordRecyclerView: RecyclerView
-    private val args: FragmentWordArgs by navArgs()
+    private val args: wordFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,18 +41,17 @@ class wordFragment : Fragment() {
         wordRecyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
 
-    private fun getWordsStartingWith(alphabet: Char): List<wordData> {
+    private fun getWordsStartingWith(alphabet: String?): List<wordData> {
         val wordList = mutableListOf<wordData>()
 
-        // Replace this with your own logic to fetch words starting with the given alphabet
         when (alphabet) {
-            'A' -> wordList.add(wordData("Apple"))
-            'B' -> {
+            "A" -> wordList.add(wordData("Apple"))
+            "B" -> {
                 wordList.add(wordData("Banana"))
                 wordList.add(wordData("Bicycle"))
                 wordList.add(wordData("Book"))
             }
-            'C' -> wordList.add(wordData("Cat"))
+            "C" -> wordList.add(wordData("Cat"))
             //TODO : lanjutin mapping word
             else -> {
                 //TODO : Bikin toast error

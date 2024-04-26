@@ -6,12 +6,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".wordFragment">
 
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="Words Starting with A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/wordRecyclerView"
+        android:background="@color/lightgreen"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/wordRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/headerTextView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

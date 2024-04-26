@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.content.Intent
 import android.net.Uri
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,6 +27,10 @@ class wordFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_word, container, false)
         wordRecyclerView = view.findViewById(R.id.wordRecyclerView)
+        val backButton = view.findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
         return view
     }
 
